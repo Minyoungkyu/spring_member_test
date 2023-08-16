@@ -1,0 +1,14 @@
+CREATE DATABASE member_test;
+
+USE member_test;
+
+CREATE TABLE `member` (
+id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+regDate DATETIME NOT NULL,
+updateDate DATETIME NOT NULL,
+authLevel SMALLINT(2) UNSIGNED DEFAULT 3 COMMENT '(3=일반, 7=관리자)',
+loginId CHAR(20) NOT NULL,
+loginPw CHAR(60) NOT NULL,
+email CHAR(50) NOT NULL,
+allowEmailReceives CHAR(5)
+);
