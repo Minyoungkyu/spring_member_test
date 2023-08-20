@@ -12,3 +12,20 @@ loginPw CHAR(60) NOT NULL,
 email CHAR(50) NOT NULL,
 allowEmailReceives CHAR(5)
 );
+
+USE member_test;
+
+CREATE TABLE article (
+	id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	regDate DATETIME NOT NULL,
+	updateDate DATETIME NOT NULL,
+	title CHAR(50) NOT NULL,
+	`body` TEXT NOT NULL,
+	userId INT UNSIGNED NOT NULL
+	);
+
+SELECT * FROM MEMBER;
+
+SELECT * FROM article;
+
+SELECT A.* , m.loginId FROM article AS A LEFT JOIN `member` AS M ON A.userId = M.id WHERE A.id = 1;

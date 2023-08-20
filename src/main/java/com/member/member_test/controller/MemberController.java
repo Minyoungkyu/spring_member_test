@@ -53,8 +53,6 @@ public class MemberController {
 
         httpSession.setAttribute("loginedMemberId", member.getId());
 
-        System.out.println(httpSession.getAttribute("loginedMemberId"));
-
         return "로그인 성공!";
     }
 

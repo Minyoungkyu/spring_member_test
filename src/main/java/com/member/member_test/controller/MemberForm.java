@@ -11,6 +11,6 @@ public class MemberForm {
     private String loginPw;
     private String confirmLoginPw;
     private String email;
-    private String check;
+    private String check; // String 으로 받으면 on/null 로 들어옴   ( Boolean 으로 받으면 true/null 로 들어옴 )
 
 }
